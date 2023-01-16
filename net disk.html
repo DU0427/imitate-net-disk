@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿里云盘</title>
+    <link rel="icon" href="./image/icon.jpg">
+    <style>
+        @import url("./css/disk.css");
+    </style>
+
+</head>
+<body>
+    <div id="root">
+        <div class="body">
+            <div class="block">
+                <div class="leftnav">
+                    <div class="simplebar-content">
+                        <div class="simplebar-content-top">
+                            <!-- 上方logo的实现 -->
+                            <div class="simplebar-content-top-logo">
+                                
+                                <span class="netdiskname">
+                                    <img src="./image/logo.png">
+                                    阿里云盘</span>
+                                <div class="change">桌面端</div>
+
+                            </div>
+
+                            <!-- logo下方可切换的功能选项 -->
+                            <ul class="simplebar-content-top-nav">
+                                <li class="nav-file active" onclick="file()">
+                                    <img class="fileicon" src="./image/fileicon.png">
+                                    文件
+                                </li>
+                                <li class="nav-file" onclick="photo()">
+                                    <img class="photo" src="./image/photo.png">
+                                    相册
+                                </li>
+                                <li class="nav-file" onclick="Favorites()">
+                                    <img class="collection" src="./image/collection.png">
+                                    收藏夹
+                                </li>
+                                <li class="nav-file" onclick="lockbox()">
+                                    <img class="lockbox" src="./image/lockbox.png">
+                                    密码箱
+                                </li>
+                                <li class="nav-file" onclick="subscribe()">
+                                    <img class="subscribe" src="./image/subscribe.png">
+                                    订阅
+                                </li>
+                                <li class="nav-file" onclick="recyclebin()">
+                                    <img class="recyclebin" src="./image/recyclebin.png">
+                                    回收站
+                                </li>
+                                
+
+                            </ul>
+                            <script src="./js/change.js"></script>
+
+                        </div>
+                        <div class="simplebar-content-bottom">
+                            <div class="capacityblock">
+                                <div class="capacity">
+                                    <div class="text">
+                                        <span class="used-size">652.01KB</span>
+                                        <span> / </span>
+                                        <span class="total-size">105GB</span>
+                                        
+
+                                    </div>
+                                    <span class="progress"></span>
+                                    
+
+                                </div>
+                                <div class="button-capacity">容量管理</div>
+
+                            </div>
+                            <div class="membership">
+                                开通会员
+                            </div>
+                            <div class="line"></div>
+                            <div class="buttom-user">
+                                <div class="user-info">
+                                    <img src="./image/user-info.png" class="user-info-icon">
+                                    <div class="text-wrapper">
+                                        <div class="name-wrapper">
+                                            <span class="user-info-name">176***295</span>
+                                            <div style="width: 12px; height: 12px; background-image: url(&quot;https://gw.alicdn.com/imgextra/i4/O1CN01VAf58X1copbk3rfLC_!!6000000003648-2-tps-80-80.png&quot;); background-size: cover; margin-left: 12px; flex: 0 0 auto;">
+                                            </div>
+
+                                        </div>
+                                        <div class="desc">
+                                            你还不是阿里云盘超级会员
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="moreiconblock">
+                                    <span class="moreicon">
+                                        <img src="./image/more.png" class="moreiconbutton">
+
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                  </div>
+                </div>
+
+                <!-- 文件页面 -->
+                <div class="rightbox file">
+                    <div class="rightboxmain" id="file1">
+                        <div class="rightboxblock">
+                            <div class="header-block">
+                                <div class="header-title">
+                                    <div class="header-title-box">
+                                        <div class="breadcrumb-1">
+                                            <span class="titlename">文件</span>
+                                        </div>
+                                   
+                                    </div>
+                                </div>
+                                <div class="header-icon">
+                                    <div class="lefticon">
+                                
+                                        <img src="./image/search.png">
+                                    </div>
+                                    <div class="righticon">
+                                        <img src="./image/add.png">
+            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file-upload">
+                                <p id="show">将文件拖到这里</p>
+                                <p>或者</p>
+                                <ul>
+                                    <li>
+                                        <span>新建文件夹</span>
+                                        <img src="./image/newfolder.png">                           
+                                   
+                                    </li>
+                                    <li onclick="filebtn()">
+                                        <span>上传文件</span>
+                                        <img src="./image/uploadfile.png">
+                                        <input type='file' name="file"  id="uploadfile">
+                                    </li>
+                                    <li  onclick="folderbtn()">
+                                        <span>上传文件夹</span>
+                                        <img src="./image/uploadfolder.png">
+                                        <input type='file' name="file" webkitdirectory id="uploadfolder">
+                                    </li>
+                                    <!-- 上传文件和上传文件夹功能 -->
+                                    <script src="./js/upload.js"></script>
+                                </ul>
+                               
+                            </div>
+            
+                        </div>
+                        
+                        
+            
+                    </div>
+          
+                    <!-- <div class="unfold-button"></div>
+                    <div></div>
+                   
+                </div> -->
+
+
+
+                <!-- 相册页面 -->
+                <!-- <div class="rightbox photo"> -->
+                    <div class="rightboxmain"  id="photo1">
+                        <div class="rightboxblock">
+                            <div class="header-block">
+                                <div class="header-title">
+                                    <div class="header-title-box">
+                                        <div class="breadcrumb-1">
+                                            <span class="titlename">相册</span>
+                                        
+                                        <ul class="lefttitle">
+                                            <li class="photoOptions on">
+                                                <span>全部照片</span>
+                                            </li>
+                                            <li class="photoOptions out">
+                                                <span>我的相簿</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                   
+                                    </div>
+                                </div>
+                                <div class="header-icon">                  
+                                    <div class="righticon">
+                                        <img src="./image/add.png">
+            
+                                    </div>
+                                </div>
+                            </div>
+                                <header class="center-header">
+                                    <div class="leftcenter">
+                                        <div class="checkbox">
+                                            <div class="checkbox-1">
+                                            <input class="input-1">
+                                        </div>
+            
+                                        </div>
+                                        <span>共0项</span>
+            
+                                    </div>
+                                    <div class="rightcenter">
+                                        <div class="allphoto">
+                                            <img class="photo1" src="./image/all.png">
+                                        <div class="texta1">全部</div>
+                                        </div>
+                                        <div class="Medium allphoto">
+                                            <img class="photo1" src="./image/Medium image.png">
+                                        <div class="text2">中图模式</div>
+                                    </div>
+                                    <div class="proportion">
+                                        <img src="./image/proportion.png">
+
+                                    </div>
+            
+                                    </div>
+                                </header>
+                           
+                            <div class="photo-upload">
+                                <div class="uploadbox">
+                                    <div class="uploadblock">
+                                        <div class="uploadicon">
+                                            <img src="./image/uploadphoto.png" class="uoloadphoto">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                              
+                            </div>
+            
+                        </div>
+                    </div>
+
+                    <!-- 收藏夹页面 -->
+                        <div class="rightboxmain" id="Favorites1">
+                            <div class="rightboxblock">
+                                <div class="header-block">
+                                    <div class="header-title">
+                                        <div class="header-title-box">
+                                            <div class="breadcrumb-1">
+                                                <span class="titlename">收藏夹</span>
+                                            </div>
+                                       
+                                        </div>
+                                    </div>
+                                    <div class="header-icon">
+                                        <div class="lefticon">
+                                
+                                            <img src="./image/search.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-upload-null">
+                                    <div class="iconnull">
+                                        <img src="./image/uploadfile.png">
+                                        <p class="null">空空如也</p>
+
+                                    </div>
+
+                                </div>
+                
+                            </div>
+                        </div>    
+
+
+                        
+                        <!-- 密码箱页面 -->
+                        <div class="rightboxmain" id="lockbox1">
+                            <div class="rightboxblock lockbox">
+                                <div class="lockbox1">
+                                        <img src="./image/newfolder.png">
+                                        <p class="Wellcome">欢迎使用密码箱</p>
+                                        <p class="introduce">双重密码加倍守护，你的专属隐私空间</p>
+                                        <div class="button">
+                                            <button class="activation">激活密码箱</button>
+
+                                        </div>
+
+                                    
+
+                                </div>
+                
+                            </div>
+                        </div>   
+
+                        <!-- 订阅界面 -->
+                        <div class="rightboxmain" id="subscribe1">
+                            <div class="rightboxblock">
+                                <div class="header-block">
+                                    <div class="header-title">
+                                        <div class="header-title-box">
+                                            <div class="breadcrumb-1">
+                                                <span class="titlename">订阅</span>
+                                            </div>
+                                       
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="file-upload-null">
+                                    <div class="iconnull">
+                                    
+                                        <p class="null">暂时没有订阅用户</p>
+
+                                    </div>
+
+                                </div>
+                
+                            </div>
+                        </div>   
+                        
+                        <!-- 回收站页面 -->
+                        <div class="rightboxmain" id="recycle-bin1">
+                            <div class="rightboxblock">
+                                <div class="header-block">
+                                    <div class="header-title">
+                                        <div class="header-title-box">
+                                            <div class="breadcrumb-1">
+                                                <span class="titlename">回收站</span>
+                                                <ul class="lefttitle">
+                                                    <li class="photoOptions on">
+                                                        <span>文件</span>
+                                                    </li>
+                                                    <li class="photoOptions out">
+                                                        <span>相册</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-upload-null">
+                                    <div class="iconnull">
+                                        <img src="./image/uploadfile.png">
+                                        <p class="null">回收站为空</p>
+
+                                    </div>
+
+                                </div>
+                
+                            </div>
+                        </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="Draganddrop" id="Dropganddrop"> </div>
+                    <div class="unfold-button"></div>
+               
+                    </div>
+                  
+            </div>
+            <script src="./js/hide button.js"></script>
+
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+         window.onload=function (ev) {
+        var container = document.getElementById("file1");
+        container.ondragenter=function () {
+
+        }
+        container.ondragover=function (e) {
+            //关闭默认事件
+            e.stopPropagation();
+            e.preventDefault();
+            //设置获取模式，为复制
+            e.dataTransfer.dropEffect = 'copy';
+        }
+        container.ondragleave =function () {
+
+        }
+        container.ondrop=function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var file = e.dataTransfer.files;
+            var file_name = file[0].name;
+            console.log(file_name);
+        }
+    }
+
+    
+    </script>
+
+<!-- <script src="./js/1.js"></script> -->
+</body>
+</html>
